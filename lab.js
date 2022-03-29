@@ -158,7 +158,7 @@ function ingredients(obj) {
   return newArray;
 }
 
-console.log(ingredients(frenchFries));
+// console.log(ingredients(frenchFries));
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -198,7 +198,16 @@ delete user.age;
   Print the name of your cat instance using dot notation.
 */
 
-//Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
+
+const newCat = new Cat('Gatsby', 8, 'orange');
+// console.log(newCat.name);
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -208,7 +217,19 @@ delete user.age;
   Call the castSpell function on the instance of your wizard.
 */
 
-//Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`);
+  }
+}
+
+const newWizard = new Wizard('Radagast', 350, 'I am Super Brown');
+// newWizard.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -233,7 +254,25 @@ delete user.age;
     to be newPrice.
 */
 
-//Code Here
+class Phone {
+  constructor(brand, model, storage, color, price, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold`);
+  }
+
+  changeprice(newPrice) {
+    this.price = newPrice;
+  }
+}
 
 /*
     Next make three new phone instances using your class.
@@ -245,7 +284,11 @@ delete user.age;
     - price: number
 */
 
-//Code Here
+const phone1 = new Phone('Sony', 'Erickson', 64, 'black', 256);
+const phone2 = new Phone('Samsung', 'Galaxy', 8, 'pink', 525);
+const phone3 = new Phone('Apple', 'iPhone2', 128, 'white', 2000);
+
+// console.log(phone3);
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -254,7 +297,8 @@ delete user.age;
   Then console.log that object to see the price change
 */
 
-//Code Here
+phone3.changeprice(1000);
+console.log(phone3);
 
 /*
   Now call the sell method on one of your other phone objects
@@ -262,7 +306,8 @@ delete user.age;
   Print the value of that phone's sell property to make sure it's been changed to true
 */
 
-//Code Here
+phone1.sell();
+console.log(phone1);
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
