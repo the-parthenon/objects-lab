@@ -98,13 +98,20 @@ let { color, make, model, year } = carDetails;
   The property names are firstName, lastName, and title.
 */
 
+const personalDetails = {
+  title: 'Mr',
+  firstName: 'Eric',
+  lastName: 'Anderson',
+};
+
 function greeting(obj) {
-  //Code Here
+  const { firstName, lastName, title } = obj;
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+// console.log(greeting(personalDetails));
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -115,8 +122,19 @@ function greeting(obj) {
   Use object destructuring to save the property values to new variables.
   Sum up the values and return the total number.
 */
+const statePops = {
+  utah: 12000,
+  california: 180000,
+  texas: 140000,
+  arizona: 15,
+};
 
-//Code Here
+function totalPopulation(obj) {
+  const { utah, california, texas, arizona } = obj;
+  return utah + california + texas + arizona;
+}
+
+// console.log(totalPopulation(statePops));
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -127,8 +145,20 @@ function greeting(obj) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+const frenchFries = {
+  carb: 'potato',
+  fat: 'oil',
+  protein: 'bacon',
+};
 
-//Code Here
+function ingredients(obj) {
+  const { carb, fat, protein } = obj;
+  let newArray = [];
+  newArray.push(carb, fat, protein);
+  return newArray;
+}
+
+console.log(ingredients(frenchFries));
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -148,14 +178,18 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user.name = 'Bryan G. Smith';
+user.email - 'bryan.smith@devmounta.in';
+
+// console.log(user);
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
   Using the user object above, delete the users age off of the object.
 */
 
-//Code Here
+delete user.age;
+// console.log(user);
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
